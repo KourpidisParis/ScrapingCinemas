@@ -59,6 +59,7 @@ public class Scraping {
        
 public static void Cineplexx() throws IOException {
 	
+	
 	final Document document = Jsoup.connect("https://www.cineplexx.gr/tainies/").get();
 	//System.out.println(document.outerHtml());   	
 	Elements details = document.select("div.detailview-element");
@@ -109,22 +110,22 @@ public static void Cineplexx() throws IOException {
 public static void VillageCosmos() throws IOException{
 	
 	String date = null;
-    String time = null;
+        String time = null;
 	String hallName = null;
-    String movie;
+        String movie;
    	Theater t=null;
    	ArrayList<MovieFromVillage> movies = new ArrayList<>();
 		 
 
    	final Document document = Jsoup.connect("https://www.villagecinemas.gr/el/kinimatografoi/cosmos-11-cinemas/").get();
-    //System.out.println(document.outerHtml());
-    ArrayList<Element> title = new ArrayList<>();
+        //System.out.println(document.outerHtml());
+        ArrayList<Element> title = new ArrayList<>();
         
     	
    	title = document.select("div.view");
-    //System.out.println(title.get(0));
+        //System.out.println(title.get(0));
 
-    for (Element row: title){
+        for (Element row: title){
         // title movies
        	movie  = row.select("div.cinema.FloatLeft h3").text();
        	MovieFromVillage m = new MovieFromVillage(movie);
@@ -147,9 +148,9 @@ public static void VillageCosmos() throws IOException{
     		}
 			
 			movies.add(m);
-       }
+         }
     	
-    for(MovieFromVillage mv : movies)
+       for(MovieFromVillage mv : movies)
     	{
     		System.out.println(mv.getMovie());
     		ArrayList<Theater> th = mv.getTheater();

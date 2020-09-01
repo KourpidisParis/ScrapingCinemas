@@ -1,4 +1,4 @@
-# ScrapingsCinemas (Java and Node.js)
+# ScrapingsCinemas with Java
 Ενα απλό πρόγραμμα που με τη χρήση της βιβλιοθήκης JSoup, παίρνει πληροφορίες απο τους κινηματογράφους Village Cosmos και Cineplex.Πληροφορίες όπως ώρες ,όνομα ταινίας,άιθουσες προβολής κτλπ.
 
 Χρησιμοποιήθηκε η βιβλιοθήκη JSoup.
